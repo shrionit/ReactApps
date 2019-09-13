@@ -24,7 +24,7 @@ class Folder extends Component{
 
   render(){
     return (
-      <div>
+      <div id="folder">
         {this.stats.folders}
         <Open />
       </div>
