@@ -8,5 +8,15 @@
 
 
 #folder{
-  background: red;
+  background: rgba(45, 5, 0, 0.46);
+  width: 100vw;
+  height: 100vh;
+  color: lightgreen;
+  position: fixed;
+  display: grid;
+  padding: 1vw;
+  grid-template-columns: auto auto auto auto auto;
+  grid-column-gap: 2vw;
+  grid-row-gap: 1vh;
+  grid-auto-rows: 10vh;
 }

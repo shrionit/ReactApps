@@ -9,7 +9,7 @@ class Open extends Component{
   render(){
     return (
       <div id='open'>
-        This is good
+        {this.props.msg}
       </div>
     );
   }

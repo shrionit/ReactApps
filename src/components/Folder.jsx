@@ -25,8 +25,14 @@ class Folder extends Component{
   render(){
     return (
       <div id="folder">
-        {this.stats.folders}
-        <Open />
+        <Open msg="hello" />
+        <Open msg="hello" />
+        <Open msg="hello" />
+        <Open msg="hello" />
+        <Open msg="hello" />
+        <Open msg="hello" />
+        <Open msg="hello" />
+        <Open msg="hello" />
       </div>
     );
   }
