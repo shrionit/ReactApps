@@ -9,22 +9,36 @@
 
 #folder{
   background: rgba(45, 5, 0, 0.46);
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   color: lightgreen;
-  position: fixed;
-  display: grid;
-  padding: 1vw;
-  grid-template-columns: auto auto auto auto auto;
-  grid-column-gap: 2vw;
-  grid-row-gap: 1vh;
-  grid-auto-rows: 10vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  .grid{
+    width: 95%;
+    height: 95%;
+    display: grid;
+    grid-gap: 5%;
+    margin: 1.5% 2.5%;
+    grid-template-columns: auto auto auto auto auto;
+    grid-auto-rows: 10%;
+  }
 }
 
-@media (min-width: 300px) {
+@media (max-width: 400px) {
   #folder{
-    grid-template-columns: auto auto auto auto;
-    grid-column-gap: 1vw;
-    grid-row-gap: 1vw;
+    .grid{
+      position: absolute;
+      width: 85%;
+      height: 85%;
+      display: grid;
+      grid-gap: 5%;
+      top: 7%;
+      left: 5%;
+      grid-template-columns: auto auto auto;
+      grid-auto-rows: 10%;
+    }
   }
 }
