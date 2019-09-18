@@ -8,30 +8,32 @@
 #folder {
   background: rgba(45, 5, 0, 0.46);
   width: 100%;
-  height: 100vh;
+  height: 100%;
   color: lightgreen;
   position: absolute;
   top: 0;
   left: 0; }
   #folder .grid {
-    width: 95%;
-    height: 95%;
+    width: 90vw;
+    height: 90vh;
     display: grid;
-    grid-gap: 5%;
+    grid-gap: 20px;
     margin: 1.5% 2.5%;
-    grid-template-columns: auto auto auto auto auto;
-    grid-auto-rows: 10%; }
+    grid-template-columns: 30% 30% 30%;
+    grid-auto-rows: 10%;
+    text-align: center; }
 
 @media (max-width: 400px) {
-  #folder .grid {
-    position: absolute;
-    width: 85%;
-    height: 85%;
-    display: grid;
-    grid-gap: 5%;
-    top: 7%;
-    left: 5%;
-    grid-template-columns: auto auto auto;
-    grid-auto-rows: 10%; } }
+  #folder {
+    width: 100%;
+    height: auto; }
+    #folder .grid {
+      max-width: 100%;
+      height: auto;
+      display: grid;
+      padding: 10px;
+      grid-gap: 30px;
+      grid-template-columns: 45% 45%;
+      grid-auto-rows: 200px; } }
 
 /*# sourceMappingURL=Folder.css.map */

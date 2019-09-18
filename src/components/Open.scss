@@ -1,24 +1,45 @@
 $font: 'Poppins', sans-serif;
-::selection { background-color: #C3CFE2; }
+::selection { background-color: rgba(0, 0, 0, 0.42); }
 #open{
-  background: #1488CC;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #2B32B2, #1488CC);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #2B32B2, #1488CC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  text-align: center;
-  align-items: center;
-  justify-content: center;
+  p{
+    position: relative;
+    margin: auto;
+    background: green;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, red, green);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, rgba(200, 100, 200, 0.8), rgba(200, 200, 200, 0.8)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    box-shadow: 0 0 50px solid red;
+  }
+  justify-self: center;
+  align-self: center;
+  background: url('./bg/bg.jpg') no-repeat fixed;
+  background-size: cover;
+  display: flex;
+  width: 100%;
+  height: 100%;
   text-transform: uppercase;
+  border-radius: 10%;
   box-shadow: 0 0 5px green;
-  -webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+
 	font: {
-		size: 100%;
+		size: 10px;
 		family: $font;
 	};
 }
 
-@media (max-width: 300px) {
+@media (max-width: 400px) {
   #open{
-    box-shadow: 0 0 5px red;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 1px 1px skyblue;
+    transition: all 0.7s;
+    font: {
+      size: 10px;
+    }
+
+  }
+  #open:hover{
+    box-shadow: 0 -1px 10px green;
   }
 }

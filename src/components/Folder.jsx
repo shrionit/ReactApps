@@ -81,9 +81,9 @@ class Folder extends Component{
     return (
       <div id="folder">
         <div className="grid">
-          {this.pd.folders.map(item => {
-            return <Open msg={item} />
-          })}
+        {this.pd.folders.map(item => {
+          return <Open msg={item} />
+        })}
         </div>
       </div>
     );
