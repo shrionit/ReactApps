@@ -20,35 +20,16 @@ class Folder extends Component{
     this.state = {
       folders: []
     };
-    this.loadJSON = this.loadJSON.bind(this);
     this.processData = this.processData.bind(this);
     this.onClick = this.onClick.bind(this);
+    this.renderFolder = this.renderFolder.bind(this);
     this.pd = {
       files: [],
-      folders: []
+      folders: [],
+      CF: ''
     }
     this.processData(Data);
-    //this.loadJSON();
   }
-
-  loadJSON = () => {
-		fetch('../myjsonfile.json', {
-				method: "get",
-				headers: {
-					'Accept': 'application/json',
-					'Content-Type': 'application/json'
-				}
-			})
-			.then(response => {
-				return response.json()
-			})
-			.then(data => {
-				this.setState({
-					folders: JSON.parse(data)
-				});
-
-			});
-	}
 
   processData(D){
     let FILES = [];
@@ -69,27 +50,66 @@ class Folder extends Component{
     }
     satya(D);
     this.setState({
-      folders: FILES
+      folders: FILES,
     });
     this.pd.files = FILES;
     this.pd.folders = FOLDERS;
   }
 
-  onClick(){
-    console.log("hello bahar");
+  onClick(folderName){
+    this.pd.CF = folderName;
+    let targetF = '..\\..\\Shriprakash\\Videos\\'+folderName
+    console.log(targetF);
+    console.log(this.renderFolder(Data.Videos[targetF]));
+  }
+
+  renderFolder(folder){
+    this.state.CF = folder;
+    console.log(folder);
+    var rdata = [];
+    for(let f in folder){
+      if(f == 'files' && folder[f].length == 0){
+        continue;
+      }else{
+        for(let d of folder[f]){
+          console.log('D -'+d);
+          rdata.push(<Open clickkrnepr={this.onClick} msg={d.name} />);
+        }
+      }
+      let data = f.slice(f.lastIndexOf("\\")+1, f.length);
+      rdata.push(<Open clickkrnepr={this.onClick} msg={data} />);
+    }
+    this.setState({
+      folders: rdata
+    });
+    return rdata;
   }
 
   render(){
     let w = window.innerWidth;
-    return (
-      <div id="folder">
-        <div className="grid">
-        {this.pd.folders.map(item => {
-          return <Open ref={item+"--walaFolder"} clickhonepr={this.onClick} msg={item} />
-        })}
+    if(this.pd.CF != ''){
+      return (
+        <div id="folder">
+          <div className="grid">
+          {
+            this.state.folders
+          }
+          </div>
         </div>
-      </div>
-    );
+      );
+    }else{
+      return (
+        <div id="folder">
+          <div className="grid">
+          {
+            this.pd.folders.map(item => {
+              return <Open clickkrnepr={this.onClick} msg={item} />
+            })
+          }
+          </div>
+        </div>
+      );
+    }
   }
 }
 
