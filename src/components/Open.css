@@ -17,15 +17,14 @@
   #open p {
     position: relative;
     margin: auto;
-    background: green;
+    background: #d46c96;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, red, green);
+    background: -webkit-linear-gradient(to right, #d82b59, #d46c96);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, rgba(200, 100, 200, 0.8), rgba(200, 200, 200, 0.8));
+    background: linear-gradient(to right, #d82b59, #d46c96);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    box-shadow: 0 0 50px solid red; }
+    -webkit-text-fill-color: transparent; }
 
 @media (max-width: 400px) {
   #open {

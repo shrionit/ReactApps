@@ -22,6 +22,7 @@ class Folder extends Component{
     };
     this.loadJSON = this.loadJSON.bind(this);
     this.processData = this.processData.bind(this);
+    this.onClick = this.onClick.bind(this);
     this.pd = {
       files: [],
       folders: []
@@ -58,14 +59,12 @@ class Folder extends Component{
           for(let item of d[F]['files']){
             FILES.push(item['name']);
           }
-          console.log(FILES);
         }
         for(let FF in d[F]){
           if(FF != 'files'){
             FOLDERS.push(FF.slice(FF.lastIndexOf("\\")+1, FF.length));
           }
         }
-        console.log(FOLDERS);
       }
     }
     satya(D);
@@ -76,13 +75,17 @@ class Folder extends Component{
     this.pd.folders = FOLDERS;
   }
 
+  onClick(){
+    console.log("hello bahar");
+  }
+
   render(){
     let w = window.innerWidth;
     return (
       <div id="folder">
         <div className="grid">
         {this.pd.folders.map(item => {
-          return <Open msg={item} />
+          return <Open ref={item+"--walaFolder"} clickhonepr={this.onClick} msg={item} />
         })}
         </div>
       </div>
