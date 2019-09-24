@@ -1,0 +1,45 @@
+{
+    "Video": {
+        "files": [],
+        "Video\\AD": {
+            "files": [
+                {
+                    "name": "Android App Development for Beginners - 3 - Setting up Your Project",
+                    "type": "mp4",
+                    "path": "Video\\AD\\Android App Development for Beginners - 3 - Setting up Your Project.mp4"
+                },
+                {
+                    "name": "Android App Development for Beginners - 4 - Running a Simple App",
+                    "type": "mp4",
+                    "path": "Video\\AD\\Android App Development for Beginners - 4 - Running a Simple App.mp4"
+                }
+            ]
+        },
+        "Video\\WEB_SERIES": {
+            "files": [],
+            "Video\\WEB_SERIES\\The": {
+                "files": [
+                    {
+                        "name": "The.Haunting.Of.Hill.House.S01E02.720p.x265.HEVC.Film2Movie_US",
+                        "type": "mkv",
+                        "path": "Video\\WEB_SERIES\\The\\The.Haunting.Of.Hill.House.S01E02.720p.x265.HEVC.Film2Movie_US.mkv"
+                    }
+                ]
+            },
+            "Video\\WEB_SERIES\\The Boys": {
+                "files": [
+                    {
+                        "name": "The.Boys.2019.S01E03.Get.Some.720p.WEB-HD.x264.400MB-Pahe.in",
+                        "type": "mkv",
+                        "path": "Video\\WEB_SERIES\\The Boys\\The.Boys.2019.S01E03.Get.Some.720p.WEB-HD.x264.400MB-Pahe.in.mkv"
+                    },
+                    {
+                        "name": "The.Boys.2019.S01E04.The.Female.of.the.Species.720p.WEB-HD.x264.450MB-Pahe.in",
+                        "type": "mkv",
+                        "path": "Video\\WEB_SERIES\\The Boys\\The.Boys.2019.S01E04.The.Female.of.the.Species.720p.WEB-HD.x264.450MB-Pahe.in.mkv"
+                    }
+                ]
+            }
+        }
+    }
+}

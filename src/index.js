@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import Folder from './components/Folder';
+import Plate from './components/Plate';
 
-ReactDOM.render(<Folder />, document.getElementById("root"));
+ReactDOM.render(<Plate />, document.getElementById("root"));
